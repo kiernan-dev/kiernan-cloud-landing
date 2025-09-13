@@ -11,7 +11,7 @@ const tools = [
     icon: MessageSquare,
     color: 'from-blue-500 to-cyan-500',
     glowColor: 'neon-glow',
-    subdomain: 'https://openwebui.example.com',
+    url: 'https://ai.kiernan.cloud',
     features: ['Multi-model Support', 'Custom Prompts', 'Real-time Chat']
   },
   {
@@ -21,7 +21,7 @@ const tools = [
     icon: Search,
     color: 'from-purple-500 to-pink-500',
     glowColor: 'neon-glow-purple',
-    subdomain: 'https://searxng.example.com',
+    url: 'https://search.kiernan.cloud',
     features: ['Privacy First', 'No Tracking', 'Multiple Sources']
   },
   {
@@ -31,7 +31,7 @@ const tools = [
     icon: Workflow,
     color: 'from-pink-500 to-orange-500',
     glowColor: 'neon-glow-pink',
-    subdomain: 'https://n8n.example.com',
+    url: 'https://n8n.kiernan.cloud',
     features: ['Visual Workflows', '200+ Integrations', 'Self-hosted']
   }
 ];
