@@ -1,7 +1,7 @@
 
 import React, { useState, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Zap, Cpu } from 'lucide-react';
+import { Sparkles, Zap, CloudLightning } from 'lucide-react';
 import { techIconsList } from '@/components/TechImageIcons.jsx';
 import ParticleIcon from '@/components/ParticleIcon';
 
@@ -64,17 +64,25 @@ const Hero = () => {
       }} transition={{
         duration: 0.8
       }} className="mb-8">
-          <motion.div animate={{
-          rotate: 360
-        }} transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }} className="inline-block mb-6">
-            <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center dark:neon-glow-purple">
-              <Cpu className="w-10 h-10 text-white" />
-            </div>
-          </motion.div>
+          <div className="inline-block mb-6">
+            <motion.div 
+              className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center"
+              animate={{
+                boxShadow: [
+                  "0 0 30px rgba(147, 51, 234, 0.8), 0 0 60px rgba(147, 51, 234, 0.4)",
+                  "0 0 50px rgba(147, 51, 234, 1), 0 0 100px rgba(147, 51, 234, 0.6)",
+                  "0 0 30px rgba(147, 51, 234, 0.8), 0 0 60px rgba(147, 51, 234, 0.4)"
+                ]
+              }}
+              transition={{
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <CloudLightning className="w-10 h-10 text-white" />
+            </motion.div>
+          </div>
           
           <motion.h1 initial={{
           opacity: 0,
@@ -113,8 +121,8 @@ const Hero = () => {
               <span>AI Powered</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Cpu className="w-5 h-5 text-pink-400" />
-              <span>Curated Integrations</span>
+              <CloudLightning className="w-5 h-5 text-pink-400" />
+              <span>Cloud Platform</span>
             </div>
             <div className="flex items-center space-x-2">
               <Zap className="w-5 h-5 text-purple-400" />
