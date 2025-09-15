@@ -1,59 +1,12 @@
 
-import React, { useState, useMemo, useCallback } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Zap, CloudLightning } from 'lucide-react';
-import { techIconsList } from '@/components/TechImageIcons.jsx';
-import ParticleIcon from '@/components/ParticleIcon';
+import Meteors from '@/components/ui/Meteors';
 
 const Hero = () => {
-  const [isPressed, setIsPressed] = useState(false);
-  const [pointerPos, setPointerPos] = useState({ x: 0, y: 0 });
-
-  const handlePointerDown = useCallback((e) => {
-    setIsPressed(true);
-    const touch = e.touches?.[0];
-    setPointerPos({
-      x: touch?.clientX || e.clientX,
-      y: touch?.clientY || e.clientY
-    });
-  }, []);
-
-  const handlePointerUp = useCallback(() => {
-    setIsPressed(false);
-  }, []);
-
-  const handlePointerMove = useCallback((e) => {
-    if (!isPressed) return;
-    
-    const touch = e.touches?.[0];
-    setPointerPos({
-      x: touch?.clientX || e.clientX,
-      y: touch?.clientY || e.clientY
-    });
-  }, [isPressed]);
-  const iconsToRender = useMemo(() => {
-    const iconCount = 20;
-    const icons = [];
-    const listLength = techIconsList.length;
-    
-    for (let i = 0; i < iconCount; i++) {
-      icons.push({
-        id: i,
-        Icon: techIconsList[i % listLength]
-      });
-    }
-    
-    return icons;
-  }, []);
-  return <section className="pt-32 pb-20 px-4 relative overflow-hidden min-h-[80vh] flex items-center justify-center cursor-pointer" onMouseDown={handlePointerDown} onMouseUp={handlePointerUp} onMouseMove={handlePointerMove} onTouchStart={handlePointerDown} onTouchEnd={handlePointerUp} onTouchMove={handlePointerMove} onMouseLeave={handlePointerUp}>
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {iconsToRender.map(({
-        id,
-        Icon
-      }) => <ParticleIcon key={id} isPressed={isPressed} pointerPos={pointerPos}>
-            <Icon />
-          </ParticleIcon>)}
-      </div>
+  return <section className="pt-32 pb-20 px-4 relative overflow-hidden min-h-[80vh] flex items-center justify-center">
+      <Meteors number={20} />
       <div className="container mx-auto text-center relative z-10 select-none">
         <motion.div initial={{
         opacity: 0,
