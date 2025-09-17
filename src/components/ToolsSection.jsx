@@ -11,7 +11,7 @@ const tools = [
     icon: MessageSquare,
     color: 'from-blue-500 to-cyan-500',
     glowColor: 'neon-glow',
-    url: 'https://ai.kiernan.cloud',
+    url: 'https://ai.kiernan.cloud:8443',
     features: ['Multi-model Support', 'Custom Prompts', 'Real-time Chat']
   },
   {
@@ -21,7 +21,7 @@ const tools = [
     icon: Search,
     color: 'from-purple-500 to-pink-500',
     glowColor: 'neon-glow-purple',
-    url: 'https://search.kiernan.cloud',
+    url: 'https://search.kiernan.cloud:8443',
     features: ['Privacy First', 'No Tracking', 'Multiple Sources']
   },
   {
@@ -31,7 +31,7 @@ const tools = [
     icon: Workflow,
     color: 'from-pink-500 to-orange-500',
     glowColor: 'neon-glow-pink',
-    url: 'https://n8n.kiernan.cloud',
+    url: 'https://n8n.kiernan.cloud:8443',
     features: ['Visual Workflows', '200+ Integrations', 'Self-hosted']
   }
 ];
