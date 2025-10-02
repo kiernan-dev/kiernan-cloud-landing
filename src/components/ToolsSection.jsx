@@ -21,7 +21,7 @@ const tools = [
     icon: Search,
     color: 'from-purple-500 to-pink-500',
     glowColor: 'neon-glow-purple',
-    url: 'https://search.kiernan.cloud',
+    url: 'https://seek.kiernan.cloud',
     features: ['Privacy First', 'No Tracking', 'Multiple Sources']
   },
   {

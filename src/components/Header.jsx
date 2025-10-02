@@ -35,7 +35,7 @@ const Header = () => {
             <motion.div whileHover={{
           scale: 1.05
         }} className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">K</span>
               </div>
               <span className="text-xl font-bold gradient-text">Kiernan.Cloud</span>
